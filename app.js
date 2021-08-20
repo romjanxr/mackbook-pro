@@ -10,6 +10,7 @@ const finalPrice = document.getElementById('final-price');
 // button function
 
 function priceUpdate(variant) {
+
     // memory
 
     if (variant == '8GB') {
