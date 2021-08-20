@@ -1,11 +1,14 @@
 
+// variables
+
+const bestPrice = document.getElementById('best-price');
+const memoryCost = document.getElementById('memory-cost');
+const storageCost = document.getElementById('storage-cost');
+const deliveryCost = document.getElementById('delivery-cost');
+
 // button function
 
 function priceUpdate(variant) {
-    const memoryCost = document.getElementById('memory-cost');
-    const storageCost = document.getElementById('storage-cost');
-    const deliveryCost = document.getElementById('delivery-cost');
-
     // memory
 
     if (variant == '8GB') {
@@ -35,6 +38,18 @@ function priceUpdate(variant) {
     else if (variant == '$20') {
         deliveryCost.innerText = '20';
     }
+    totalPriceUpdate();
+}
+
+// total price update function
+
+function totalPriceUpdate() {
+    const bestPriceAmount = parseFloat(bestPrice.innerText);
+    const memoryCostAmount = parseFloat(memoryCost.innerText);
+    const storageCostAmount = parseFloat(storageCost.innerText);
+    const deliveryCostAmount = parseFloat(deliveryCost.innerText);
+    const totalPrice = bestPriceAmount + memoryCostAmount + storageCostAmount + deliveryCostAmount;
+    document.getElementById('total-price').innerText = totalPrice;
 }
 
 // 8GB unified memory
