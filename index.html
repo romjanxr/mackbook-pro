@@ -12,13 +12,13 @@
 <body>
     <main>
         <section class="w-3/4 mx-auto my-24">
-            <div class="flex gap-12">
+            <div class="flex gap-12 border-b-2">
                 <div>
                     <img class="w-full" src="images/mac.png" alt="">
                 </div>
                 <div>
                     <h2 class="text-4xl font-semibold	">Customize your Blue 24-inch iMac with Apple M1 chip</h2>
-                    <p class="mt-3 mb-6 w-4/5">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency
+                    <p class="mt-3 w-4/5">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency
                         cores,
                         7-core GPU, and
                         16-core Neural Engine
@@ -27,10 +27,92 @@
                         Two Thunderbolt / USB 4 ports
                         Magic Mouse
                         Magic Keyboard - US English</p>
+
+                    <!-- Memory -->
+
+                    <h5 class="text-xl font-semibold mb-2 mt-8">Memory</h5>
+                    <button
+                        class="border-2 border-gray-500 px-3 py-1 rounded focus:border-blue-500 hover:bg-black hover:text-white"
+                        id="8GB-memory">8GB
+                        unified
+                        memory</button>
+                    <button
+                        class="border-2 border-gray-500 px-3 py-1 rounded focus:border-blue-500 hover:bg-black hover:text-white"
+                        id="16GB-memory">16GB
+                        unified
+                        memory</button>
+
+                    <!-- Storage -->
+
+                    <h5 class="text-xl font-semibold mb-2 mt-8">Storage</h5>
+                    <button
+                        class="border-2 border-gray-500 px-3 py-1 rounded focus:border-blue-500 hover:bg-black hover:text-white"
+                        id="256GB-storage">256GB
+                        SSD
+                        storage</button>
+                    <button
+                        class="border-2 border-gray-500 px-3 py-1 rounded focus:border-blue-500 hover:bg-black hover:text-white"
+                        id="512GB-storage">512GB
+                        SSD
+                        storage</button>
+                    <button
+                        class="border-2 border-gray-500 px-3 py-1 rounded focus:border-blue-500 hover:bg-black hover:text-white"
+                        id="1TB-storage">1TB
+                        SSD
+                        storage</button>
+
+                    <!-- Choose Your Delivery Option -->
+
+                    <h5 class="text-xl font-semibold mb-2 mt-8">Choose your delivery option</h5>
+                    <button
+                        class="border-2 border-gray-500 px-3 py-1 rounded focus:border-blue-500 hover:bg-black hover:text-white"
+                        id="free-delivery">Friday,
+                        Aug 25 FREE
+                        Prime
+                        Delivery</button>
+                    <button
+                        class="border-2 border-gray-500 px-3 py-1 rounded focus:border-blue-500 hover:bg-black hover:text-white"
+                        id="20-delivery">Friday,
+                        Aug 21
+                        Delivery charge
+                        $20</button>
+
+                    <!-- Price Section  -->
+
+                    <div class="w-2/4">
+                        <div class="flex justify-between border-b border-gray-300 px-3">
+                            <h5 class="text-xl font-semibold mb-2 mt-10">Best Price</h5>
+                            <h5 class="text-xl font-semibold mb-2 mt-10">$<span>1299</span></h5>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-300 px-3">
+                            <h5 class="text-xl font-semibold mb-2 mt-5">Extra Memory Cost</h5>
+                            <h5 class="text-xl font-semibold mb-2 mt-5">$<span id="memory-cost">0</span></h5>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-300 px-3">
+                            <h5 class="text-xl font-semibold mb-2 mt-5">Extra Storage Cost</h5>
+                            <h5 class="text-xl font-semibold mb-2 mt-5">$<span id="storage-cost">0</span></h5>
+                        </div>
+                        <div class="flex justify-between border-b-2 border-gray-700 px-3">
+                            <h5 class="text-xl font-semibold mb-2 mt-5">Delivery Charge</h5>
+                            <h5 class="text-xl font-semibold mb-2 mt-5">$<span id="delivery-cost">0</span></h5>
+                        </div>
+                        <div class="flex justify-between px-3 border-b border-gray-300">
+                            <h5 class="text-xl font-semibold mt-2 mb-2">Total Price</h5>
+                            <h5 class="text-xl font-semibold mt-2 mb-2">$<span>1299</span></h5>
+                        </div>
+                        <div class="my-4">
+                            <h5 class="text-lg font-medium mb-2">Add Promo Code</h5>
+                            <input class="border-2 rounded px-3 py-1" type="text" id="">
+                            <button
+                                class="bg-red-500 text-white px-4 py-1.5 rounded hover:bg-black hover:text-white">Apply</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <h2 class="text-4xl font-semibold text-center mt-3">Total: $<span>1299</span></h2>
         </section>
     </main>
+    <script src="app.js"></script>
 </body>
 
 </html>
