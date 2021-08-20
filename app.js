@@ -5,6 +5,7 @@ const bestPrice = document.getElementById('best-price');
 const memoryCost = document.getElementById('memory-cost');
 const storageCost = document.getElementById('storage-cost');
 const deliveryCost = document.getElementById('delivery-cost');
+const finalPrice = document.getElementById('final-price');
 
 // button function
 
@@ -50,6 +51,21 @@ function totalPriceUpdate() {
     const deliveryCostAmount = parseFloat(deliveryCost.innerText);
     const totalPrice = bestPriceAmount + memoryCostAmount + storageCostAmount + deliveryCostAmount;
     document.getElementById('total-price').innerText = totalPrice;
+    finalPrice.innerText = totalPrice;
+    return totalPrice;
+}
+
+// promo code function for bonus
+
+function promoCode() {
+    const totalPrice = totalPriceUpdate();
+    const promoInputValue = document.getElementById('promo-input').value;
+    const promoInputValueConverted = promoInputValue.toLowerCase();
+    if (promoInputValueConverted == 'stevekaku') {
+        const discount = totalPrice * 0.2;
+        finalPrice.innerText = totalPrice - discount;
+        document.getElementById('promo-input').value = '';
+    }
 }
 
 // 8GB unified memory
@@ -93,3 +109,9 @@ document.getElementById('free-delivery').addEventListener('click', function () {
 document.getElementById('20-delivery').addEventListener('click', function () {
     priceUpdate('$20');
 });
+
+// promo code apply button
+
+document.getElementById('promo-apply-btn').addEventListener('click', function () {
+    promoCode();
+})
